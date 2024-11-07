@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="normalaize.css"> -->
+
+    <title>Document</title>
+</head>
+<body>
+
+  <nav class="py-2 mt-5">
+  <div class="container d-flex flex-wrap">
+    <ul class="nav me-auto fw-bold align-items-center">   
+      <li class="nav-item "><a href="#" class="nav-link link-dark px-2 active color-laganja fs-2" aria-current="page">UNICLET</a></li>
+      <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Мой бутик</a></li>
+      <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Товары</a></li>
+      <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Продажи</a></li>
+      <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Аналитика</a></li>
+      <li class="nav-item"><a href="#" class="nav-link link-dark px-2 ">Доставка</a></li>
+      <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Финансы</a></li>
+      <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Продвижение</a></li>
+      <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Отчёты</a></li>
+    </ul>
+    <ul class="nav align-items-center color-laganja">
+      <li class="nav-item fs-2 me-3"><i class="bi bi-search"></i></li>
+      <li class="nav-item fs-2 me-3"><i class="bi bi-chat-left-dots-fill"></i></li>
+      <li class="nav-item fs-2 me-3"><i class="bi bi-bell-fill"></i></li>
+      <li class="nav-item fs-2 me-3"><i class="bi bi-person-fill"></i></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="b-example-divider"></div>
+<header class="py-3 mb-4 border-bottom navbar-fixed-top">
+  <div class="container d-flex flex-wrap justify-content-center">
+  <!-- <div class="container"> -->
+    
+    <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+      <div class="text-muted border-bottom border-2 border-dark">
+        <p class="fs-3 text-dark">Продажи</p>
+        <span class="goods fs-5 me-4">Товары</span>
+        <span class="goods fs-5">Товары под заказ</span>
+      </div>
+    </a>  
+
+    <form class="w-50 p-3">
+    <!-- <form class="col-12 col-lg-auto mb-3 mb-lg-0"> -->
+      <input type="search" class="form-control" placeholder="Поиск по номеру заказа или ID покупателя" aria-label="Search">
+    </form>
+  </div>
+</header>
+
+  <div class="container px-4 ">
+    <div class="row gx-5">
+      <div class="col-3">
+      <div class="p-3 border border-3 border-light rounded-3 ">          
+        <p>Новые заявки</p>
+        <span>5</span>
+        <span class="text-muted">на</span>
+        <span>24 500 ₽</span></div>
+      </div>
+      <div class="col-3">
+      <div class="p-3 border border-3 border-light rounded-3">          
+          <p>Новые заявки</p>
+          <span>5</span>
+          <span class="text-muted">на</span>
+          <span>24 500 ₽</span></div>
+      </div>
+      <div class="col-3">
+        <div class="p-3 border border-3 border-light rounded-3">          
+          <p>Новые заявки</p>
+          <span>5</span>
+          <span class="text-muted">на</span>
+          <span>24 500 ₽</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4 mb-3">
+    <div class="d-flex me-auto">
+      <ul class="nav me-auto gap-3">   
+      <button class="btn btn-outline-secondary rounded-pill btn-status" type="button">Все</button>
+      <button class="btn btn-outline-secondary rounded-pill btn-status" type="button">Заявки</button>
+      <button class="btn btn-outline-secondary rounded-pill btn-status" type="button">Новые заказы</button>
+      <button class="btn btn-outline-secondary rounded-pill btn-status" type="button">В доставке</button>
+      <button class="btn btn-outline-secondary rounded-pill btn-status" type="button">Завершённые</button>
+      <button class="btn btn-outline-secondary rounded-pill btn-status" type="button">Возвраты и обмен</button>
+      </ul>
+      <span class="align-items-center fw-bolder" id="color-azule">
+        <a class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal" href=""><span class="bi bi-sliders px-2 border-end border-3 border-light"> Фильтр</span></a>
+        <a class="text-decoration-none" href=""><span class="bi bi-box-arrow-down"> Импорт</span></a>
+      </span>
+    </div>
+  </div>
+
+  <div class="container">
+    <table class="table d-flex justify-content-between table-hover useCounter">
+        <tr class="bg-azul text-light">
+          <!-- <td scope="col"></td>
+          <td scope="col">Номер заказа</td>
+          <td scope="col">Дата <i class="bi bi-arrow-down-short"> </i></td>
+          <td scope="col">Статус <i class="bi bi-funnel"> </i></td>
+          <td scope="col">Состав заказов</td>
+          <td scope="col">Стоимость товаров, руб</td>
+          <td scope="col">Покупатель</td>
+          <td scope="col">Адрес получателя</td>
+          <td scope="col">Способ доставки</td>
+          <td scope="col">Стоимость доставки, руб</td>
+          <td scope="col">Действие</td> -->
+          <th scope="col"></th>
+          <th scope="col">Номер заказа</th>
+          <th scope="col">Дата <i class="bi bi-arrow-down-short"> </i></th>
+          <th scope="col">Статус <i class="bi bi-funnel"> </i></th>
+          <th scope="col">Состав заказов</th>
+          <th scope="col">Стоимость товаров, руб</th>
+          <th scope="col">Покупатель</th>
+          <th scope="col">Адрес получателя</th>
+          <th scope="col">Способ доставки</th>
+          <th scope="col">Стоимость доставки, руб</th>
+          <th scope="col">Действие</th>
+        </tr>
+
+<!-- содержание таблицы -->
+        <tr>
+          <td scope="col" class="text-black-50"></td>
+          <td scope="col" id="color-azule"><a href="">123456</a></td>
+          <td scope="col">
+            <p>02.09.24</p>
+            <p>11:08:27</p>
+          </td>
+        <td scope="col"><button class="button rounded-pill pe-3 text-nowrap fw-bold bg-azul-white color-mint"><i class="bi bi-dot"></i>
+          Запрос цены</button></td>
+        <td scope="col">
+            <p class="fw-bold">3 товара</p>
+            <p class="text-nowrap">Кухня “Традиция” <a href="" id="color-azule">Арт. 896523 <i class="bi bi-box-arrow-up-right"></i></a> </p>
+            <p class="text-nowrap">Кухня “Традиция” <a href="" id="color-azule">Арт. 896523 <i class="bi bi-box-arrow-up-right"></i></a> </p>
+            <p><span><a href="" id="color-azule">Подробнее<i class="bi bi-arrow-right"></i></a></p></span>
+        </td>
+          
+          <td scope="col" class="fw-bold fw-bold">1 000 000</td>
+          <td scope="col ">
+            <p>Анна Спиридонова</p>  
+            <p>ID: <span class="text-black-50">896523 <i class="bi bi-clipboard"></i></span></p>  
+            <p id="color-azule" class="fw-bold"><i class="color-gold bi bi-star-fill"></i> 4.4</p>  
+            <p><button type="button" class="button bg-azul-light text-dark border-0 rounded-3 px-3 py-1 fw-bold">В чат <i class="bi bi-arrow-right"></i></button>
+          </p>  
+          </td>
+          <td scope="col">Россия, г. Москва, ул. Копылова, дом12, кв. 32</td>
+          <td scope="col">Деловые линии</td>
+          <td scope="col" class="fw-bold">40 000</td>
+          <td scope="col"><button type="button" class="btn btn-sm text-light bg-laganja btn-hov-dark fw-bold text-nowrap btn-action"><i class="bi bi-plus-lg"></i> Создать заказ</button></td>
+        </tr>
+
+        <tr>
+          <td scope="col" class="text-black-50"></td>
+          <td scope="col" id="color-azule"><a href="">123456</a></td>
+          <td scope="col">
+            <p>02.09.24</p>
+            <p>11:08:27</p>
+          </td>
+        <td scope="col"><button class="button btn-red-act color-purple rounded-pill pe-4 text-nowrap fw-bold"><i class="bi bi-dot"></i>
+          Ожидает оплаты</button></td>
+        <td scope="col">
+            <p class="fw-bold">3 товара</p>
+            <p class="text-nowrap">Кухня “Традиция” <a href="" id="color-azule">Арт. 896523 <i class="bi bi-box-arrow-up-right"></i></a> </p>
+            <p class="text-nowrap">Кухня “Традиция” <a href="" id="color-azule">Арт. 896523 <i class="bi bi-box-arrow-up-right"></i></a> </p>
+            <p><span><a href="" id="color-azule">Подробнее<i class="bi bi-arrow-right"></i></a></p></span>
+        </td>
+          
+          <td scope="col" class="fw-bold fw-bold">1 000 000</td>
+          <td scope="col ">
+            <p>Анна Спиридонова</p>  
+            <p>ID: <span class="text-black-50">896523 <i class="bi bi-clipboard"></i></span></p>  
+            <p id="color-azule" class="fw-bold"><i class="color-gold bi bi-star-fill"></i> 4.4</p>  
+            <p><button type="button" class="button bg-azul-light text-dark border-0 rounded-3 px-3 py-1 fw-bold">В чат <i class="bi bi-arrow-right"></i></button>
+          </p>  
+          </td>
+          <td scope="col">Россия, г. Москва, ул. Копылова, дом12, кв. 32</td>
+          <td scope="col">Деловые линии</td>
+          <td scope="col" class="fw-bold">40 000</td>
+          <td scope="col"><button type="button" class="btn btn-action btn-sm text-light bg-laganja fw-bold btn-hov-dark text-nowrap"><i class="bi bi-pen"></i> Редактировать</button></td>
+        </tr>
+
+        <tr>
+          <td scope="col" class="text-black-50"></td>
+          <td scope="col" id="color-azule"><a href="">123456</a></td>
+          <td scope="col">
+            <p>02.09.24</p>
+            <p>11:08:27</p>
+          </td>
+        <td scope="col"><button class="button rounded-pill pe-4 text-nowrap fw-bold color-sand bg-cream"><i class="bi bi-dot"></i>
+          Оплачен</button></td>
+        <td scope="col">
+            <p class="fw-bold">3 товара</p>
+            <p class="text-nowrap">Кухня “Традиция” <a href="" id="color-azule">Арт. 896523 <i class="bi bi-box-arrow-up-right"></i></a> </p>
+            <p class="text-nowrap">Кухня “Традиция” <a href="" id="color-azule">Арт. 896523 <i class="bi bi-box-arrow-up-right"></i></a> </p>
+            <p><span><a href="" id="color-azule">Подробнее<i class="bi bi-arrow-right"></i></a></p></span>
+        </td>
+          
+          <td scope="col" class="fw-bold fw-bold">1 000 000</td>
+          <td scope="col ">
+            <p>Анна Спиридонова</p>  
+            <p>ID: <span class="text-black-50">896523 <i class="bi bi-clipboard"></i></span></p>  
+            <p id="color-azule" class="fw-bold"><i class="color-gold bi bi-star-fill"></i> 4.4</p>  
+            <p><button type="button" class="button bg-azul-light text-dark border-0 rounded-3 px-3 py-1 fw-bold">В чат <i class="bi bi-arrow-right"></i></button>
+          </p>  
+          </td>
+          <td scope="col">Россия, г. Москва, ул. Копылова, дом12, кв. 32</td>
+          <td scope="col">Деловые линии</td>
+          <td scope="col" class="fw-bold">40 000</td>
+          <td scope="col"><button type="button" class="btn btn-sm border-2 border-info text-dark fw-bold btn-hov-grey text-nowrap btn-action"><i class="bi bi-check2"></i>
+            В обработку </button></td>
+        </tr>
+  
+        <tr>
+          <td scope="col" class="text-black-50"></td>
+          <td scope="col" id="color-azule"><a href="">123456</a></td>
+          <td scope="col">
+            <p>02.09.24</p>
+            <p>11:08:27</p>
+          </td>
+        <td scope="col"><button class="button rounded-pill pe-4 text-nowrap fw-bold color-black bg-light-grey"><i class="bi bi-dot"></i>
+          В обработке</button> </td>
+        <td scope="col">
+            <p class="fw-bold">3 товара</p>
+            <p class="text-nowrap">Кухня “Традиция” <a href="" id="color-azule">Арт. 896523 <i class="bi bi-box-arrow-up-right"></i></a> </p>
+            <p class="text-nowrap">Кухня “Традиция” <a href="" id="color-azule">Арт. 896523 <i class="bi bi-box-arrow-up-right"></i></a> </p>
+            <p><span><a href="" id="color-azule">Подробнее<i class="bi bi-arrow-right"></i></a></p></span>
+        </td>
+          
+          <td scope="col" class="fw-bold fw-bold">1 000 000</td>
+          <td scope="col ">
+            <p>Анна Спиридонова</p>  
+            <p>ID: <span class="text-black-50">896523 <i class="bi bi-clipboard"></i></span></p>  
+            <p id="color-azule" class="fw-bold"><i class="color-gold bi bi-star-fill"></i> 4.4</p>  
+            <p><button type="button" class="button bg-azul-light text-dark border-0 rounded-3 px-3 py-1 fw-bold">В чат <i class="bi bi-arrow-right"></i></button>
+          </p>  
+          </td>
+          <td scope="col">Россия, г. Москва, ул. Копылова, дом12, кв. 32</td>
+          <td scope="col">Деловые линии</td>
+          <td scope="col" class="fw-bold">40 000</td>
+          <td scope="col"><button type="button" class="btn btn-sm border-2 border-info text-dark fw-bold btn-hov-grey text-nowrap btn-action"><i class="bi bi-box-seam"></i>
+            В доставку </button></td>
+        </tr>
+
+        <tr>
+          <td scope="col" class="text-black-50"></td>
+          <td scope="col" id="color-azule"><a href="">123456</a></td>
+          <td scope="col">
+            <p>02.09.24</p>
+            <p>11:08:27</p>
+          </td>
+        <td scope="col"><button class="button rounded-pill pe-4 text-nowrap fw-bold bg-blue-light color-light-blue"><i class="bi bi-dot"></i>
+          Передаем в доставку</button> </td>
+        <td scope="col">
+            <p class="fw-bold">3 товара</p>
+            <p class="text-nowrap">Кухня “Традиция” <a href="" id="color-azule">Арт. 896523 <i class="bi bi-box-arrow-up-right"></i></a> </p>
+            <p class="text-nowrap">Кухня “Традиция” <a href="" id="color-azule">Арт. 896523 <i class="bi bi-box-arrow-up-right"></i></a> </p>
+            <p><span><a href="" id="color-azule">Подробнее<i class="bi bi-arrow-right"></i></a></p></span>
+        </td>
+          
+          <td scope="col" class="fw-bold fw-bold">1 000 000</td>
+          <td scope="col ">
+            <p>Анна Спиридонова</p>  
+            <p>ID: <span class="text-black-50">896523 <i class="bi bi-clipboard"></i></span></p>  
+            <p id="color-azule" class="fw-bold"><i class="color-gold bi bi-star-fill"></i> 4.4</p>  
+            <p><button type="button" class="button bg-azul-light text-dark border-0 rounded-3 px-3 py-1 fw-bold">В чат <i class="bi bi-arrow-right"></i></button>
+          </p>  
+          </td>
+          <td scope="col">Россия, г. Москва, ул. Копылова, дом12, кв. 32</td>
+          <td scope="col">Деловые линии</td>
+          <td scope="col" class="fw-bold">40 000</td>
+          <td scope="col"><button type="button" class="btn btn-action btn-sm text-light bg-laganja fw-bold btn-hov-dark text-nowrap"><i class="bi bi-plus-lg"></i> Добавить трек</button></td>
+        </tr>
+
+        <tr>
+          <td scope="col" class="text-black-50"></td>
+          <td scope="col" id="color-azule"><a href="">123456</a></td>
+          <td scope="col">
+            <p>02.09.24</p>
+            <p>11:08:27</p>
+          </td>
+        <td scope="col"><button class="button rounded-pill pe-4 text-nowrap fw-bold color-light-blue-2 bg-blue-light"><i class="bi bi-dot"></i>
+          В службе доставки</button></td>
+        <td scope="col">
+            <p class="fw-bold">3 товара</p>
+            <p class="text-nowrap">Кухня “Традиция” <a href="" id="color-azule">Арт. 896523 <i class="bi bi-box-arrow-up-right"></i></a> </p>
+            <p class="text-nowrap">Кухня “Традиция” <a href="" id="color-azule">Арт. 896523 <i class="bi bi-box-arrow-up-right"></i></a> </p>
+            <p><span><a href="" id="color-azule">Подробнее<i class="bi bi-arrow-right"></i></a></p></span>
+        </td>
+          
+          <td scope="col" class="fw-bold fw-bold">1 000 000</td>
+          <td scope="col ">
+            <p>Анна Спиридонова</p>  
+            <p>ID: <span class="text-black-50">896523 <i class="bi bi-clipboard"></i></span></p>  
+            <p id="color-azule" class="fw-bold"><i class="color-gold bi bi-star-fill"></i> 4.4</p>  
+            <p><button type="button" class="button bg-azul-light text-dark border-0 rounded-3 px-3 py-1 fw-bold">В чат <i class="bi bi-arrow-right"></i></button>
+          </p>  
+          </td>
+          <td scope="col">Россия, г. Москва, ул. Копылова, дом12, кв. 32</td>
+          <td scope="col">Деловые линии</td>
+          <td scope="col" class="fw-bold">40 000</td>
+          <td scope="col"><button type="button" class="btn btn-sm text-dark fw-bold bg-azul-light text-nowrap btn-action">
+            Отследить <i class="bi bi-arrow-right"></i> </button></td>
+        </tr>
+
+        <tr>
+          <td scope="col" class="text-black-50"></td>
+          <td scope="col" id="color-azule"><a href="">123456</a></td>
+          <td scope="col">
+            <p>02.09.24</p>
+            <p>11:08:27</p>
+          </td>
+        <td scope="col"><button class="button rounded-pill pe-4 text-nowrap fw-bold bg-light-green color-green"><i class="bi bi-dot"></i>
+          Доставлен</button> </td>
+        <td scope="col">
+            <p class="fw-bold">3 товара</p>
+            <p class="text-nowrap">Кухня “Традиция” <a href="" id="color-azule">Арт. 896523 <i class="bi bi-box-arrow-up-right"></i></a> </p>
+            <p class="text-nowrap">Кухня “Традиция” <a href="" id="color-azule">Арт. 896523 <i class="bi bi-box-arrow-up-right"></i></a> </p>
+            <p><span><a href="" id="color-azule">Подробнее<i class="bi bi-arrow-right"></i></a></p></span>
+        </td>
+          
+          <td scope="col" class="fw-bold fw-bold">1 000 000</td>
+          <td scope="col ">
+            <p>Анна Спиридонова</p>  
+            <p>ID: <span class="text-black-50">896523 <i class="bi bi-clipboard"></i></span></p>  
+            <p id="color-azule" class="fw-bold"><i class="color-gold bi bi-star-fill"></i> 4.4</p>  
+            <p><button type="button" class="button bg-azul-light text-dark border-0 rounded-3 px-3 py-1 fw-bold">В чат <i class="bi bi-arrow-right"></i></button>
+          </p>  
+          </td>
+          <td scope="col">Россия, г. Москва, ул. Копылова, дом12, кв. 32</td>
+          <td scope="col">Деловые линии</td>
+          <td scope="col" class="fw-bold">40 000</td>
+          <td scope="col"><button type="button" class="btn btn-sm text-dark fw-bold bg-azul-light text-nowrap btn-action">
+            Отследить <i class="bi bi-arrow-right"></i> </button></td>
+        </tr>
+
+        <tr>
+          <td scope="col" class="text-black-50"></td>
+          <td scope="col" id="color-azule"><a href="">123456</a></td>
+          <td scope="col">
+            <p>02.09.24</p>
+            <p>11:08:27</p>
+          </td>
+        <td scope="col"><button class="button color-purple bg-light-pink rounded-pill pe-4 text-nowrap fw-bold"><i class="bi bi-dot"></i>
+          Ожидается отзыв</button></td>
+        <td scope="col">
+            <p class="fw-bold">3 товара</p>
+            <p class="text-nowrap">Кухня “Традиция” <a href="" id="color-azule">Арт. 896523 <i class="bi bi-box-arrow-up-right"></i></a> </p>
+            <p class="text-nowrap">Кухня “Традиция” <a href="" id="color-azule">Арт. 896523 <i class="bi bi-box-arrow-up-right"></i></a> </p>
+            <p><span><a href="" id="color-azule">Подробнее<i class="bi bi-arrow-right"></i></a></p></span>
+        </td>
+          
+          <td scope="col" class="fw-bold fw-bold">1 000 000</td>
+          <td scope="col ">
+            <p>Анна Спиридонова</p>  
+            <p>ID: <span class="text-black-50">896523 <i class="bi bi-clipboard"></i></span></p>  
+            <p id="color-azule" class="fw-bold"><i class="color-gold bi bi-star-fill"></i> 4.4</p>  
+            <p><button type="button" class="button bg-azul-light text-dark border-0 rounded-3 px-3 py-1 fw-bold">В чат <i class="bi bi-arrow-right"></i></button>
+          </p>  
+          </td>
+          <td scope="col">Россия, г. Москва, ул. Копылова, дом12, кв. 32</td>
+          <td scope="col">Деловые линии</td>
+          <td scope="col" class="fw-bold">40 000</td>
+          <td scope="col"><button type="button" class="btn btn-sm text-light bg-laganja fw-bold btn-hov-dark text-nowrap btn-action">Оставить отзыв</button></td>
+        </tr>
+
+        <tr>
+          <td scope="col" class="text-black-50"></td>
+          <td scope="col" id="color-azule"><a href="">123456</a></td>
+          <td scope="col">
+            <p>02.09.24</p>
+            <p>11:08:27</p>
+          </td>
+        <td scope="col"><button class="button rounded-pill pe-4 text-nowrap fw-bold bg-blue-light color-purple-blue"><i class="bi bi-dot"></i>
+          Возврат заказа</button> </td>
+        <td scope="col">
+            <p class="fw-bold">3 товара</p>
+            <p class="text-nowrap">Кухня “Традиция” <a href="" id="color-azule">Арт. 896523 <i class="bi bi-box-arrow-up-right"></i></a> </p>
+            <p class="text-nowrap">Кухня “Традиция” <a href="" id="color-azule">Арт. 896523 <i class="bi bi-box-arrow-up-right"></i></a> </p>
+            <p><span><a href="" id="color-azule">Подробнее<i class="bi bi-arrow-right"></i></a></p></span>
+        </td>
+          
+          <td scope="col" class="fw-bold fw-bold">1 000 000</td>
+          <td scope="col ">
+            <p>Анна Спиридонова</p>  
+            <p>ID: <span class="text-black-50">896523 <i class="bi bi-clipboard"></i></span></p>  
+            <p id="color-azule" class="fw-bold"><i class="color-gold bi bi-star-fill"></i> 4.4</p>  
+            <p><button type="button" class="button bg-azul-light text-dark border-0 rounded-3 px-3 py-1 fw-bold">В чат <i class="bi bi-arrow-right"></i></button>
+          </p>  
+          </td>
+          <td scope="col">Россия, г. Москва, ул. Копылова, дом12, кв. 32</td>
+          <td scope="col">Деловые линии</td>
+          <td scope="col" class="fw-bold">40 000</td>
+          <td scope="col">
+              <button type="button" class="btn btn-sm text-light bg-laganja fw-bold btn-hov-dark text-nowrap btn-action">Оставить отзыв</button>
+              <button type="button" class="btn btn-sm text-dark fw-bold bg-azul-light text-nowrap btn-action">
+                Отследить <i class="bi bi-arrow-right"></i> </button> 
+          </td>
+        </tr>
+
+        <tr>
+          <td scope="col" class="text-black-50"></td>
+          <td scope="col" id="color-azule"><a href="">123456</a></td>
+          <td scope="col">
+            <p>02.09.24</p>
+            <p>11:08:27</p>
+          </td>
+        <td scope="col"><button class="button rounded-pill pe-4 text-nowrap fw-bold bg-light-pink color-red-pink"><i class="bi bi-dot"></i>
+          Не доставлен</button>  </td>
+        <td scope="col">
+            <p class="fw-bold">3 товара</p>
+            <p class="text-nowrap">Кухня “Традиция” <a href="" id="color-azule">Арт. 896523 <i class="bi bi-box-arrow-up-right"></i></a> </p>
+            <p class="text-nowrap">Кухня “Традиция” <a href="" id="color-azule">Арт. 896523 <i class="bi bi-box-arrow-up-right"></i></a> </p>
+            <p><span><a href="" id="color-azule">Подробнее<i class="bi bi-arrow-right"></i></a></p></span>
+        </td>
+          
+          <td scope="col" class="fw-bold fw-bold">1 000 000</td>
+          <td scope="col ">
+            <p>Анна Спиридонова</p>  
+            <p>ID: <span class="text-black-50">896523 <i class="bi bi-clipboard"></i></span></p>  
+            <p id="color-azule" class="fw-bold"><i class="color-gold bi bi-star-fill"></i> 4.4</p>  
+            <p><button type="button" class="button bg-azul-light text-dark border-0 rounded-3 px-3 py-1 fw-bold">В чат <i class="bi bi-arrow-right"></i></button>
+          </p>  
+          </td>
+          <td scope="col">Россия, г. Москва, ул. Копылова, дом12, кв. 32</td>
+          <td scope="col">Деловые линии</td>
+          <td scope="col" class="fw-bold">40 000</td>
+          <td scope="col">
+              <button type="button" class="btn btn-sm text-light bg-laganja fw-bold btn-hov-dark text-nowrap btn-action">Оставить отзыв</button>
+              <button type="button" class="btn btn-sm text-dark fw-bold bg-azul-light text-nowrap btn-action">
+                Отследить <i class="bi bi-arrow-right"></i> </button> 
+          </td>
+        </tr>
+    </table>  
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4">
+                  <p class="py-2 border-test"><i class="bi bi-calendar2-week"></i> <span class="p-2">Дата</span></p>
+                  <p class="py-2"><i class="bi bi-list"></i><span class="p-2">Статус</span></p>
+                  <p class="py-2"><i class="bi bi-bag-check"></i><span class="p-2">Товар</span></p>
+                  <p class="py-2"><i class="bi bi-globe"></i><span class="p-2">Адрес</span></p>
+                  <p class="py-2 text-nowrap"><i class="bi bi-box-seam"></i><span class="p-2">Служба доставки</span></p>
+                </div>
+
+                <div class="col-md-7 border-start border-2 ms-2">
+                  <div class=""><input type="search" class="form-control"  placeholder="Поиск по категориям..." aria-label="Search"></div>
+                  <div class="mt-3">
+                    
+                    <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."><button class="button rounded-pill pe-4 text-nowrap fw-bold bg-azul-white color-mint"><i class="bi bi-dot"></i>
+                      Запрос цены</button></span>
+  
+                    <span class="d-flex align-items-center  py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                      <button class="button btn-red-act color-purple rounded-pill pe-4 text-nowrap fw-bold"><i class="bi bi-dot"></i>
+                        Ожидает оплаты</button>
+                    </span>
+  
+                    <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                      <button class="button color-purple bg-light-pink rounded-pill pe-4 text-nowrap fw-bold"><i class="bi bi-dot"></i>
+                        Ожидается отзыв</button>
+                    </span>
+  
+                    <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                      <button class="button rounded-pill pe-4 text-nowrap fw-bold color-sand bg-cream"><i class="bi bi-dot"></i>
+                        Оплачен</button>
+                    </span>
+  
+                    <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                      <button class="button rounded-pill pe-4 text-nowrap fw-bold color-black bg-light-grey"><i class="bi bi-dot"></i>
+                          В обработке</button> 
+                    </span>
+  
+                    <span class="d-flex align-items-center py-1"><input class="form-check-input me-3 fixed" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                      <button class="button rounded-pill pe-4 text-nowrap fw-bold bg-blue-light color-light-blue"><i class="bi bi-dot"></i>
+                        Передаем в доставку</button> 
+                    </span>
+  
+                    <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                      <button class="button rounded-pill pe-4 text-nowrap fw-bold color-light-blue-2 bg-blue-light"><i class="bi bi-dot"></i>
+                        В службе доставки</button>
+                    </span>
+  
+                    <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                      <button class="button rounded-pill pe-4 text-nowrap fw-bold bg-light-green color-green"><i class="bi bi-dot"></i>
+                        Доставлен</button> 
+                    </span>
+                    
+                    <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                      <button class="button rounded-pill pe-4 text-nowrap fw-bold bg-light-pink color-red-pink"><i class="bi bi-dot"></i>
+                        Не доставлен</button> 
+                    </span>
+                    <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                      <button class="button rounded-pill pe-4 text-nowrap fw-bold bg-blue-light color-purple-blue"><i class="bi bi-dot"></i>
+                        Возврат заказа</button> 
+                    </span>                  
+                  </div>                 
+                </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-4">
+                  </div>
+  
+                  <div class="col-md-8 modal-footer d-flex justify-content-between border-0">
+                      <button type="button" class="btn btn-lg rounded-pill bg-light-grey fw-bold">Сбросить</button>
+                      <button type="button" class="btn btn-lg rounded-pill bg-orange text-light fw-bold">Применить</button>                                 
+                  </div>
+                  </div>              
+              </div>
+              </div>
+            </div>                        
+          </div>
+        </div>
+      </div>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
