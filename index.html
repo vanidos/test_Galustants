@@ -10,8 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="normalaize.css"> -->
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+
 
     <title>Document</title>
 </head>
@@ -444,57 +446,147 @@
     </table>  
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body">
-            <div class="container-fluid">
+            <div class="container-fluid p-0 m-0 ">
               <div class="row">
-                <div class="col-md-4">
-                  <p class="py-2 border-test"><i class="bi bi-calendar2-week"></i> <span class="p-2">Дата</span></p>
-                  <p class="py-2"><i class="bi bi-list"></i><span class="p-2">Статус</span></p>
-                  <p class="py-2"><i class="bi bi-bag-check"></i><span class="p-2">Товар</span></p>
-                  <p class="py-2"><i class="bi bi-globe"></i><span class="p-2">Адрес</span></p>
-                  <p class="py-2 text-nowrap"><i class="bi bi-box-seam"></i><span class="p-2">Служба доставки</span></p>
-                </div>
+                <!-- меню модалка -->
+                <nav class="col-md-4 pe-0 nav_modal border-end border-2">
+                  <p class="btn-hov-grey py-2 px-2 li_modal" data-rel="1"><i class="bi bi-calendar2-week"></i> <span class="p-2">Дата</span></p>
+                  <p class="btn-hov-grey py-2 px-2 li_modal" data-rel="2"><i class="bi bi-list"></i><span class="p-2">Статус</span></p>
+                  <p class="btn-hov-grey py-2 px-2 li_modal" data-rel="3"><i class="bi bi-bag-check"></i><span class="p-2">Товар</span></p>
+                  <p class="btn-hov-grey py-2 px-2 li_modal" data-rel="4"><i class="bi bi-globe"></i><span class="p-2">Адрес</span></p>
+                  <p class="btn-hov-grey py-2 px-2 text-nowrap li_modal" data-rel="5"><i data-rel="1" class="bi bi-box-seam"></i><span class="p-2">Служба доставки</span></p>
+                </nav>
 
-                <div class="col-md-7 border-start border-2 ms-2">
+                <div class="section_modal col-md-8">
+                  <button type="button" class="btn btn-outline-dark btn-lg flex-fill btn-block">Месяц</button>
+                  <button type="button" class="btn btn-outline-dark btn-lg flex-fill btn-block">Квартал</button>
+                  <button type="button" class="btn btn-outline-dark btn-lg flex-fill btn-block">Год</button>
+
+                  <div class="my-3"><input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                  <i class="bi mx-1"></i>Весь период</div>
+                  <div class="py-3">Собственный диапазон дат</div>
+
+                  <p class="py-2">
+                    <input type="date" id="start" name="trip-start" placeholder="Начало" class="border p-3 border-2 rounded border-light" value="Конец" min="1999-01-01" max="2026-12-31" />
+                  </p>
+
+                  <p class="py-2">
+                    <input type="date" id="start" name="trip-start" placeholder="Конец" class="border p-3 border-2 rounded border-light" value="Конец" min="1999-01-01" max="2026-12-31" />
+                  </p>                         
+                </div>    
+                
+                <div class="section_modal col-md-7">
                   <div class=""><input type="search" class="form-control"  placeholder="Поиск по категориям..." aria-label="Search"></div>
-                  <div class="mt-3">
-                    
-                    <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."><button class="button rounded-pill pe-4 text-nowrap fw-bold bg-azul-white color-mint"><i class="bi bi-dot"></i>
+                  <div class="mt-3">                    
+                   <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."><button class="button rounded-pill pe-4 text-nowrap fw-bold bg-azul-white color-mint"><i class="bi bi-dot"></i>
                       Запрос цены</button></span>
-  
+              
                     <span class="d-flex align-items-center  py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
                       <button class="button btn-red-act color-purple rounded-pill pe-4 text-nowrap fw-bold"><i class="bi bi-dot"></i>
                         Ожидает оплаты</button>
                     </span>
-  
+              
                     <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
                       <button class="button color-purple bg-light-pink rounded-pill pe-4 text-nowrap fw-bold"><i class="bi bi-dot"></i>
                         Ожидается отзыв</button>
                     </span>
-  
+              
                     <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
                       <button class="button rounded-pill pe-4 text-nowrap fw-bold color-sand bg-cream"><i class="bi bi-dot"></i>
                         Оплачен</button>
                     </span>
-  
+              
                     <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
                       <button class="button rounded-pill pe-4 text-nowrap fw-bold color-black bg-light-grey"><i class="bi bi-dot"></i>
                           В обработке</button> 
                     </span>
-  
+              
                     <span class="d-flex align-items-center py-1"><input class="form-check-input me-3 fixed" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
                       <button class="button rounded-pill pe-4 text-nowrap fw-bold bg-blue-light color-light-blue"><i class="bi bi-dot"></i>
                         Передаем в доставку</button> 
                     </span>
-  
+              
                     <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
                       <button class="button rounded-pill pe-4 text-nowrap fw-bold color-light-blue-2 bg-blue-light"><i class="bi bi-dot"></i>
                         В службе доставки</button>
                     </span>
-  
+              
+                    <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                      <button class="button rounded-pill pe-4 text-nowrap fw-bold bg-light-green color-green"><i class="bi bi-dot"></i>
+                        Доставлен</button> 
+                    </span>
+                    
+                    <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                      <button class="button rounded-pill pe-4 text-nowrap fw-bold bg-light-pink color-red-pink"><i class="bi bi-dot"></i>
+                        Не доставлен</button> 
+                    </span>
+                    <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                      <button class="button rounded-pill pe-4 text-nowrap fw-bold bg-blue-light color-purple-blue"><i class="bi bi-dot"></i>
+                        Возврат заказа</button> 
+                    </span>                  
+                  </div>                  
+                </div>
+
+                <div class="section_modal col-md-7">
+                  <div class=""><input type="search" class="form-control"  placeholder="Поиск по категориям..." aria-label="Search"></div>
+                  <div class="mt-3">                    
+                    <div class="card mb-3 shadow p-3 mb-5 bg-body" style="max-width: 33rem;">
+                      <div class="row">
+                        <div class="col-sm-4">
+                          <img class="img-fluid" src="images/item_sm.png"  alt="item">
+                        </div>
+                        <div class="col-sm-8">
+                          <div class="card-body">
+                            <h5 class="card-title text-decoration-underline">Кухня</h5>
+                            <p class="card-text">Артикул: 123457</p>
+                            <p class="card-text">Цвет: черный</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>                  
+                </div>
+                                 
+                <div class="col-md-7 border-start border-2 section_modal">
+                  <div class=""><input type="search" class="form-control"  placeholder="Поиск по категориям..." aria-label="Search"></div>
+                  <div class="mt-3">                    
+                   <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."><button class="button rounded-pill pe-4 text-nowrap fw-bold bg-azul-white color-mint"><i class="bi bi-dot"></i>
+                      Запрос цены</button></span>
+              
+                    <span class="d-flex align-items-center  py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                      <button class="button btn-red-act color-purple rounded-pill pe-4 text-nowrap fw-bold"><i class="bi bi-dot"></i>
+                        Ожидает оплаты</button>
+                    </span>
+              
+                    <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                      <button class="button color-purple bg-light-pink rounded-pill pe-4 text-nowrap fw-bold"><i class="bi bi-dot"></i>
+                        Ожидается отзыв</button>
+                    </span>
+              
+                    <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                      <button class="button rounded-pill pe-4 text-nowrap fw-bold color-sand bg-cream"><i class="bi bi-dot"></i>
+                        Оплачен</button>
+                    </span>
+              
+                    <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                      <button class="button rounded-pill pe-4 text-nowrap fw-bold color-black bg-light-grey"><i class="bi bi-dot"></i>
+                          В обработке</button> 
+                    </span>
+              
+                    <span class="d-flex align-items-center py-1"><input class="form-check-input me-3 fixed" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                      <button class="button rounded-pill pe-4 text-nowrap fw-bold bg-blue-light color-light-blue"><i class="bi bi-dot"></i>
+                        Передаем в доставку</button> 
+                    </span>
+              
+                    <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                      <button class="button rounded-pill pe-4 text-nowrap fw-bold color-light-blue-2 bg-blue-light"><i class="bi bi-dot"></i>
+                        В службе доставки</button>
+                    </span>
+              
                     <span class="d-flex align-items-center py-1"><input class="form-check-input me-3" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
                       <button class="button rounded-pill pe-4 text-nowrap fw-bold bg-light-green color-green"><i class="bi bi-dot"></i>
                         Доставлен</button> 
@@ -510,27 +602,38 @@
                     </span>                  
                   </div>                 
                 </div>
+              
+                <div class="section_modal">
+                    444
                 </div>
+              
+                <div class="section_modal">
+                    555
+                </div>  
+              </div>
 
-                <div class="row">
-                  <div class="col-md-4">
-                  </div>
+              <div class="row">
+                <div class="col-md-4">
+              </div>
   
                   <div class="col-md-8 modal-footer d-flex justify-content-between border-0">
                       <button type="button" class="btn btn-lg rounded-pill bg-light-grey fw-bold">Сбросить</button>
                       <button type="button" class="btn btn-lg rounded-pill bg-orange text-light fw-bold">Применить</button>                                 
                   </div>
-                  </div>              
+              </div>              
               </div>
               </div>
             </div>                        
-          </div>
-        </div>
-      </div>
+      </div>             
+    </div>
+    </div>
 
-    <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-</body>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>    
+
+  </body>
 </html>
