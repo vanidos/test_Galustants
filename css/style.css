@@ -365,9 +365,6 @@ button{
   cursor: pointer;
 
 }
-.active {
-  /* background: #7f7f7f; */
-}
 
 .input-group-append {
   cursor: pointer;

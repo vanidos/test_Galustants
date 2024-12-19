@@ -28,7 +28,6 @@ var $category = $(this).data("target");
 });
 
 
-
 (function($) {
   $('.nav_modal .li_modal').click(function() {
     $(this).addClass('.active').siblings('.li_modal').removeClass('.active');
@@ -36,8 +35,14 @@ var $category = $(this).data("target");
   });
 })(jQuery);
 
+// Popover
 
-
-$(function(){
-  $('#datepicker').datepicker();
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover({
+     trigger: 'hover',
+         html: true,
+         content: function () {
+       return '<img class="img-fluid" src="'+$(this).data('img') + '" />';
+         },
+   }) 
 });
