@@ -97,7 +97,7 @@
       <button class="btn btn-outline-secondary rounded-pill btn-status" type="button">Возвраты и обмен</button>
       </ul>
       <span class="align-items-center fw-bolder" id="color-azule">
-        <a class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal" href=""><span class="bi bi-sliders px-2 border-end border-3 border-light"> Фильтр</span></a>
+        <a class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#filterModal" href=""><span class="bi bi-sliders px-2 border-end border-3 border-light"> Фильтр</span></a>
         <a class="text-decoration-none" href=""><span class="bi bi-box-arrow-down"> Импорт</span></a>
       </span>
     </div>
@@ -133,7 +133,7 @@
 <!-- содержание таблицы -->
         <tr>
           <td scope="col" class="text-black-50"></td>
-          <td scope="col" id="color-azule"><a href="">123456</a></td>
+          <td scope="col" id="color-azule"><a data-bs-toggle="modal" data-bs-target="#orderModal" href="">123456</a></td>
           <td scope="col">
             <p>02.09.24</p>
             <p>11:08:27</p>
@@ -449,7 +449,8 @@
     </table>  
 
     <!-- Modal -->
-   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> -->
+   <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body">
@@ -609,6 +610,23 @@
               </div>
             </div>                        
       </div> 
+
+
+      <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="container-fluid p-0 m-0 ">
+                <div class="row">
+                  <!-- меню модалка -->
+                     
+                  </div>
+                </div>
+              
+                </div>
+                </div>
+              </div>                        
+        </div> 
 
     <div class="container">
       <a href="#"  data-toggle="popover" data-img="images/table.png">Toggle popover</a>

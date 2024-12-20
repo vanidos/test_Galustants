@@ -1,0 +1,46 @@
+[33mcommit fe0faf7c19e0d581dcf3b4deebb048b78dc9911f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: ****** <*******.com>
+Date:   Thu Dec 19 15:42:12 2024 +0300
+
+    new commit
+
+:100644 100644 1ee2d0f ab1c713 M	css/style.css
+:000000 100644 0000000 8011da7 A	images/table.png
+:100644 100644 3ede3c1 1c7fc77 M	index.html
+:100644 100644 bf871ee 5fdf312 M	js/main.js
+
+[33mcommit 82ff611dea23ce8d542ee1d5410ef747d23a55b1[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: ****** <*******.com>
+Date:   Wed Dec 4 12:31:58 2024 +0300
+
+    first commit
+
+:100644 100644 4ba9f3f 83b6cb7 M	buttons.html
+:100644 100644 661a74d 661a74d R100	headers.css	css/headers.css
+:100644 100644 db6fd27 1ee2d0f R076	style.css	css/style.css
+:000000 100644 0000000 03dd360 A	images/item.png
+:000000 100644 0000000 808f97a A	images/item_sm.png
+:100644 100644 ab27ae0 3ede3c1 M	index.html
+:000000 100644 0000000 9418c73 A	js/jquery-3.7.1.js
+:000000 100644 0000000 bf871ee A	js/main.js
+:100644 000000 5864120 0000000 D	main.js
+:100644 100644 c45a85f f26d0a8 M	normalaize.css
+:100644 100644 9b42adf c342cba M	notes.txt
+
+[33mcommit 73d7f39822b13659e6ad8ab03b256c8248d1ddc7[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Ivan Eroshin <vanidos@gmail.com>
+Date:   Thu Nov 7 23:06:22 2024 +0300
+
+    upd
+
+:000000 100644 0000000 4ba9f3f A	buttons.html
+:000000 100644 0000000 5008ddf A	fonts/.DS_Store
+:000000 100644 0000000 661a74d A	headers.css
+:000000 100644 0000000 5008ddf A	images/.DS_Store
+:000000 100644 0000000 ab27ae0 A	index.html
+:000000 100644 0000000 5864120 A	main.js
+:000000 100644 0000000 c45a85f A	normalaize.css
+:000000 100644 0000000 9b42adf A	notes.txt
+:000000 100644 0000000 4911fb4 A	package-lock.json
+:000000 100644 0000000 efc9100 A	package.json
+:000000 100644 0000000 db6fd27 A	style.css
