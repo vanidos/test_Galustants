@@ -99,9 +99,9 @@ table.useCounter tr:has(td)::before {
   color: var(--color-gold)
 };
 
-.color-azule{
+/* .color-azule{
   color: var(--color-azule);
-}
+} */
 
 .bg-color-light-pink{
   color: var(--color-light-pink);
