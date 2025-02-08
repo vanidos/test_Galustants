@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "sass": "^1.80.4"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "normalize.css": "^8.0.1",
+    "rfs": "^10.0.0"
+  }
+}
